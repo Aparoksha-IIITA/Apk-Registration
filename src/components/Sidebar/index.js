@@ -87,12 +87,12 @@ const Drawer = styled(MuiDrawer, {
 const navLinks = [
     {
         name: "Registered Events",
-        link: "/events/registered",
+        link: "/dashboard/events/registered",
         icon: <AppRegistrationIcon />,
     },
     {
         name: "All Events",
-        link: "/events",
+        link: "/dashboard/events",
         icon: <EventIcon />,
     },
     {
