@@ -48,16 +48,15 @@ export default ()=>{
                 continue;
             }
         }
-        console.log(formData);
+        window.alert(formData);
         form.reset();
         // window.alert("Registered");
     }
     return (
-        <div className="h-screen flex justify-center items-center">
+        <div className="bg-[#0a1929] h-screen flex justify-center items-center">
             <div className="ml-auto md:ml-0 p-1 h-fit md:h-auto md:w-[70%] w-1/2 flex items-center justify-center flex-col">
-                
                 <form id="rform" onSubmit={getData} className="mt-8 mx-5 border-[0px] border-yellow-50 grid gap-y-4 gap-x-8 items-center justify-center">
-                <div className="my-6 text-5xl font-thin col-span-2 md:col-span-1">
+                <div className="text-[#3399ff] my-6 text-5xl font-thin col-span-2 md:col-span-1">
                     Register
                 </div>
                 <div className="flex flex-col">
@@ -85,7 +84,7 @@ export default ()=>{
                 <WhiteBorderTextField required variant="outlined" />
                 </div>
                 <button type="submit" 
-                className="md:mr-auto ml-auto mt-10 md:col-span-1 col-span-2 border-[.1px] w-32 h-9 hover:bg-[cyan] hover:text-[black] hover:border-0 hover:shadow-[0_0_10px_0_cyan] transition-all duration-300"
+                className="md:mr-auto ml-auto mt-10 md:col-span-1 col-span-2 border-[.1px] w-32 h-9 hover:bg-[#3399ff] hover:text-[black] hover:border-0 hover:shadow-[0_0_5px_0_cyan] transition-[backgroundColor_.5s_ease] "
                 >Register</button>
                 </form>
             </div>
