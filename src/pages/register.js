@@ -16,13 +16,10 @@ const WhiteBorderTextField = styled(TextField)`
         
     }
     color:white;
-    border-radius:30px;
+    border-radius:0px;
     padding-left:10px;
     padding-right:10px;
-    &.Mui-focused
-    {
-        background:#424242;
-    }
+    height:50px;
   }
   & .MuiOutlinedInput-root {
     & fieldset {
@@ -56,18 +53,39 @@ export default ()=>{
         // window.alert("Registered");
     }
     return (
-        <div className="bg-[#1b1b1b] h-screen flex justify-center items-center">
-            <div className="shadow-[inset_0_0_5px_1px_black] bg-[#242424] rounded-3xl p-5 h-1/2 md:h-auto md:w-[70%] w-1/2 flex items-center justify-center flex-col">
-                Registration Form
-                <form id="rform" onSubmit={getData} className="mt-8 mx-5 border-[0px] border-yellow-50 grid gap-y-4 gap-x-2 items-center justify-center">
-                <WhiteBorderTextField required variant="outlined" label="Name" />
-                <WhiteBorderTextField required variant="outlined" label="College" />
-                <WhiteBorderTextField required variant="outlined" label="Phone Number" type="text" inputProps={{ pattern: "[0-9]*" }}/>
-                <WhiteBorderTextField required variant="outlined" label="Address" />
-                <WhiteBorderTextField required variant="outlined" label="Graduation Year" type="number" defaultValue={2025}/>
-                <WhiteBorderTextField required variant="outlined" label="Degree" />
+        <div className="h-screen flex justify-center items-center">
+            <div className="ml-auto md:ml-0 p-1 h-fit md:h-auto md:w-[70%] w-1/2 flex items-center justify-center flex-col">
+                
+                <form id="rform" onSubmit={getData} className="mt-8 mx-5 border-[0px] border-yellow-50 grid gap-y-4 gap-x-8 items-center justify-center">
+                <div className="my-6 text-5xl font-thin col-span-2 md:col-span-1">
+                    Register
+                </div>
+                <div className="flex flex-col">
+                <label className="mb-1 text-sm text-slate-300">Name</label>
+                <WhiteBorderTextField required variant="outlined" />
+                </div>
+                <div className="flex flex-col">
+                <label className="mb-1 text-sm text-slate-300">College</label>
+                <WhiteBorderTextField required variant="outlined" />
+                </div>
+                <div className="flex flex-col ">
+                <label className="mb-1 text-sm text-slate-300">Phone Number</label>
+                <WhiteBorderTextField required variant="outlined" type="text" inputProps={{ pattern: "[0-9]*" }}/>
+                </div>
+                <div className="flex flex-col">
+                <label className="mb-1 text-sm text-slate-300">Address</label>
+                <WhiteBorderTextField required variant="outlined" />
+                </div>
+                <div className="flex flex-col">
+                <label className="mb-1 text-sm text-slate-300">Graduation Year</label>
+                <WhiteBorderTextField required variant="outlined" type="number" defaultValue={2025}/>
+                </div>
+                <div className="flex flex-col">
+                <label className="mb-1 text-sm text-slate-300">Degree</label>
+                <WhiteBorderTextField required variant="outlined" />
+                </div>
                 <button type="submit" 
-                className="ml-auto mr-auto mt-10 md:col-span-1 col-span-2 border-[.1px] w-32 h-9 rounded-3xl hover:bg-[white] hover:text-[black]"
+                className="md:mr-auto ml-auto mt-10 md:col-span-1 col-span-2 border-[.1px] w-32 h-9 hover:bg-[cyan] hover:text-[black] hover:border-0 hover:shadow-[0_0_10px_0_cyan] transition-all duration-300"
                 >Register</button>
                 </form>
             </div>
